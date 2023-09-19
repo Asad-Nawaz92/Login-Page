@@ -14,12 +14,7 @@ function signup() {
     return;
   }
 
-  if (
-    name === "" ||
-    confirmPassword === "" ||
-    email === "" ||
-    password === ""
-  ) {
+  if (name === "" || confirmPassword === "" || email === "" || password === "") {
     alert("Please fill in all fields.");
     return;
   }
