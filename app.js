@@ -9,12 +9,17 @@ function signup() {
   var password = passwordInput.value;
   var confirmPassword = confirmpasswordInput.value;
 
-  if (password != confirmPassword){
+  if (password != confirmPassword) {
     alert("Passwords do not match.");
     return;
   }
 
-  if (name === "" || confirmPassword === "" || email === "" || password === "") {
+  if (
+    name === "" ||
+    confirmPassword === "" ||
+    email === "" ||
+    password === ""
+  ) {
     alert("Please fill in all fields.");
     return;
   }
