@@ -1,5 +1,5 @@
 function signup() {
-  var nameInput = document.createElement("signup-name");
+  var nameInput = document.getElementById("signup-name");
   var emailInput = document.getElementById("signup-email");
   var passwordInput = document.getElementById("signup-pass");
   var confirmpasswordInput = document.getElementById("signup-confirm-pass");
@@ -8,6 +8,15 @@ function signup() {
   var email = emailInput.value;
   var password = passwordInput.value;
   var confirmPassword = confirmpasswordInput.value;
+
+  var newUser = {
+    email: email,
+    password: password,
+  };
+
+  users.push(newUser);
+  localStorage.setItem("users", JSON.stringify(users));
+  location.href = "./signin.html";
 
   if (password != confirmPassword) {
     alert("Passwords do not match.");
@@ -40,15 +49,6 @@ function signup() {
     location.href = "./signin.html";
     return;
   }
-
-  var newUser = {
-    email: email,
-    password: password,
-  };
-
-  users.push(newUser);
-  localStorage.setItem("users", JSON.stringify(users));
-  location.href = "./signin.html";
 }
 
 function signin() {
