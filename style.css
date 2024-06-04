@@ -101,6 +101,7 @@ h2 {
 
 .container a:hover {
   text-decoration: underline;
+  color: rgb(0, 211, 211);
 }
 
 button {
@@ -118,8 +119,8 @@ button {
 
 button:hover {
   color: #fff;
+  background-color: rgb(2, 109, 109);
   border-color: #fff;
-  background: rgba(255, 255, 255, 0.15);
 }
 
 .register {
